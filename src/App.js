@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import React, { Component, useState } from 'react';
 import './App.css';
+import Question1 from './question1';
+import Question2 from './question2';
 
-function App() {
+//Setup to allow for one question per page changed by a button.
+const Component1 = () => (
+  <div>
+    <Question1 />
+  </div>
+);
+
+const Component2 = () => (
+  <div>
+    <Question2 />
+  </div>
+);
+
+//Main function that combines both functions
+export default function App() {
+  const [showComponent1, setShowComponent1] = useState(true);
+
+  const toggleComponent = () => {
+    setShowComponent1(!showComponent1);
+  }; 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <button onClick={toggleComponent}>Change Question</button>
+      {showComponent1 ? <Component1 /> : <Component2 />}   
     </div>
   );
+      
 }
-
-export default App;

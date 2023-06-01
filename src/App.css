@@ -24,9 +24,51 @@
   color: white;
 }
 
+.Img-overlay {
+  position: relative;
+  top: -975px;
+  right: 0px;
+ 
+}
+
+.Img-overlayAb {
+  position: relative;
+  top: -975px;
+  right: -410px;
+ 
+}
+
+.Img-overlayAc {
+  position: relative;
+  top: -975px;
+  right: 415px;
+}
+
+
+.Img-background {
+  width: 100%;
+  position: relative;
+}
+
+.Btn-style {
+  top: 0px;
+  font-size: 30px;
+  text-align: center;
+  padding: 15px 32px;
+
+}
+
+.Format-style {
+  top: 0px;
+}
+
+
+
 .App-link {
   color: #61dafb;
 }
+
+
 
 @keyframes App-logo-spin {
   from {
