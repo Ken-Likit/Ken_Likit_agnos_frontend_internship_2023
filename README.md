@@ -16,5 +16,5 @@
  
 # Outstanding problem 
 1. Due to the image map implementation, when clicking on an area inside the image it would cause the page to reload and reset the state. As a result the selelected area would be reset and the overlay image(s) would dissapear. To solve this I used `e.preventDefault` to stop the page reload and the side effect is that it would not respond to further clicks.
-2. 
+
 
